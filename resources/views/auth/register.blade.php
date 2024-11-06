@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card shadow">
-                    <div class="card-header text-center bg-success text-white">
+                    <div class="bg-pastel-pinkbtn card-header text-center   text-white">
                         <h3>Sign Up</h3>
                     </div>
                     <div class="card-body">
@@ -34,10 +34,10 @@
                                     name="password_confirmation" required>
                             </div>
 
-                            <button type="submit" class="btn btn-success btn-block">Create Account</button>
+                            <button type="submit" class="bg-pastel-pinkbtn btn   btn-block">Create Account</button>
 
                             <div class="text-center mt-3">
-                                <a href="{{ route('login') }}">Already have an account? Login</a>
+                                <a style="color: #6c757d;" href="{{ route('login') }}">Already have an account? Login</a>
                             </div>
                         </form>
                     </div>

@@ -1,66 +1,123 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Here's a sample `README.md` file for your project:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+# Dardos Tech: Blog Application with Role-Based Access Control
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project is a simple blog application with role-based access control that allows _Admins_ to manage blog posts and _Users_ to add comments. The application is built using Laravel and utilizes Blade for templating, jQuery for client-side validation, and Eloquent ORM for database interactions.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Table of Contents
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   [Objective](#objective)
+-   [Features](#features)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Roles and Permissions](#roles-and-permissions)
+-   [Database Structure](#database-structure)
+-   [Bonus Feature](#bonus-feature)
+-   [Submission](#submission)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Objective
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+The goal of this project is to build a blog application with the following requirements:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **Admin** role to manage blog posts (create, edit, delete).
+-   **User** role to view posts and add comments.
 
-## Laravel Sponsors
+## Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### User Roles and Permissions
 
-### Premium Partners
+1. **Admin**:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    - Can add new posts.
+    - Can edit and delete existing posts.
 
-## Contributing
+2. **User**:
+    - Can view posts.
+    - Can add comments to any post.
+    - Can edit or delete their own comments (Bonus Feature).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Authentication
 
-## Code of Conduct
+-   Only authenticated users can interact with the application.
+-   Laravel’s built-in authentication is utilized for secure access.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Post Management (Admin)
 
-## Security Vulnerabilities
+-   Admins can manage blog posts through the admin dashboard.
+-   Each post includes a title, content, and timestamp.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Commenting (User)
 
-## License
+-   Logged-in users can comment on posts.
+-   Each comment is linked to the user and the associated post.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### User Interface
+
+-   Built with Laravel Blade templates for structured and reusable views.
+-   Form validation with jQuery for smooth user experience.
+-   Simple, user-friendly design with a pastel color theme.
+
+### Database
+
+-   Database management using Laravel's Eloquent ORM.
+-   Migrations are used to create necessary tables.
+-   Sample data is seeded for testing purposes.
+
+---
+
+## Installation
+
+### Prerequisites
+
+-   [PHP](https://www.php.net/) >= 7.3
+-   [Composer](https://getcomposer.org/)
+-   [Node.js](https://nodejs.org/)
+-   [Laravel](https://laravel.com/) (tested with version 10)
+
+### Steps
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/your-username/dardos-tech-blog.git
+    cd dardos-tech-blog
+    ```
+
+2. **Install dependencies**:
+
+    ```bash
+    composer install
+    npm install
+    npm run dev
+    ```
+
+3. **Environment Configuration**:
+
+    - Copy `.env.example` to `.env`.
+    - Configure your database and other environment settings in the `.env` file.
+
+    ```bash
+    php artisan key:generate
+    ```
+
+4. **Database Setup**:
+
+    - Run migrations and seed the database with sample data.
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+5. **Run the Application**:
+
+    ```bash
+    php artisan serve
+    ```
+
+    Visit `http://localhost:8000` in your browser.
+
+---

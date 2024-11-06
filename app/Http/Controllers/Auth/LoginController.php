@@ -21,7 +21,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('dashboard')->with('success', 'Logged in successfully');
+            return redirect()->route('posts.index')->with('success', 'Logged in successfully');
         }
 
         return back()->withErrors(['email' => 'Invalid credentials'])->withInput();
