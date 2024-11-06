@@ -58,7 +58,6 @@ The goal of this project is to build a blog application with the following requi
 ### User Interface
 
 -   Built with Laravel Blade templates for structured and reusable views.
--   Form validation with jQuery for smooth user experience.
 -   Simple, user-friendly design with a pastel color theme.
 
 ### Database
@@ -75,7 +74,6 @@ The goal of this project is to build a blog application with the following requi
 
 -   [PHP](https://www.php.net/) >= 7.3
 -   [Composer](https://getcomposer.org/)
--   [Node.js](https://nodejs.org/)
 -   [Laravel](https://laravel.com/) (tested with version 10)
 
 ### Steps
@@ -83,8 +81,8 @@ The goal of this project is to build a blog application with the following requi
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/dardos-tech-blog.git
-    cd dardos-tech-blog
+    git clone https://github.com/Aseel-Aburumman/blogSite.git
+    cd blogSite
     ```
 
 2. **Install dependencies**:
